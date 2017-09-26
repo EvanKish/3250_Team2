@@ -113,11 +113,10 @@ float sine(float radius)
 
 float cosine(float radius)
 {
-	float val;
-    float cos;
-		val = radius * (PI/180);
-		cos = 1 - (power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
-	return cos;
+    float val, cos;
+    val = radius * (PI/180);        
+    cos = 1 - (power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
+    return cos;
 }
 
 int spprint(char*screen, char*sym, int ini, int res){
@@ -146,10 +145,10 @@ float Aryprint(char*screen, float ans){
  
 int main(int argc,char*argv[])
 {
-	float a,b,c;
-	float r1,r2;
-	char sym;
-	int menu,rmenu,smenu;
+    float a,b,c;
+    float r1,r2;
+    char sym;
+    int menu,rmenu,smenu;
 
     do{
     	printf("\n======\n");
