@@ -160,7 +160,7 @@ int main(int argc,char*argv[])
     	printf("3.Acountant Calculator\n");
     	printf("4.Read Help and Notice\n");
     	printf("0.Exit\n");
-    	menu = input("Select Menu: ");//input main menu
+    	menu = input("Select Menu: ");
     	system("clear");
 
         if(menu == 1){
@@ -174,7 +174,7 @@ int main(int argc,char*argv[])
             	printf("3.MULTIPLY\n");
             	printf("4.DIVIDE\n");
             	printf("0.BACK\n");
-            	rmenu = input("Select Menu: ");//input regular  menu
+            	rmenu = input("Select Menu: ");
             	system("clear");
 
                 if(rmenu == 1){
