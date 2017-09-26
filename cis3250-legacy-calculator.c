@@ -5,7 +5,7 @@
 #include "matrices.h"
 #include "powerfunction.h"
 #include "conversions.h"
-#include<string.h>
+#include <string.h>
 
 FILE*help;
 
@@ -113,41 +113,37 @@ float sine(float radius)
 
 float cosine(float radius)
 {
-	float val,cos;
-		val=radius*(PI/180);
-		cos=1-(power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
+	float val;
+    float cos;
+		val = radius * (PI/180);
+		cos = 1 - (power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
 	return cos;
 }
 
-int spprint(char*screen,char*sym,int ini,int res)
-{
-	printf("%s %d%s = %d\n",screen,ini,sym,res);
+int spprint(char*screen, char*sym, int ini, int res){
+    printf("%s %d%s = %d\n",screen,ini,sym,res);
 	
-return 0;
+    return 0;
 }
 
-float spprintf(char*screen,char*sym,float ini,float res)
-{
-	printf("%s %.4f%s = %.4f\n",screen,ini,sym,res);
+float spprintf(char*screen, char*sym, float ini, float res){
+    printf("%s %.4f%s = %.4f\n",screen,ini,sym,res);
 
-return 0;
+    return 0;
 }
 
-float print(char*screen,char*sym,float ini,float upt,float res)
-{
-	printf("%s %.4f %s %.4f = %.4f\n",screen,ini,sym,upt,res);
+float print(char*screen, char*sym, float ini, float upt, float res){
+    printf("%s %.4f %s %.4f = %.4f\n",screen,ini,sym,upt,res);
 
-return 0;
-}
-float Aryprint(char*screen,float ans)
-{
-	printf("%s : %.4f\n",screen,ans);
-
-return 0;
+    return 0;
 }
 
+float Aryprint(char*screen, float ans){
+    printf("%s : %.4f\n",screen,ans);
 
-
+    return 0;
+}
+ 
 int main(int argc,char*argv[])
 {
 	float a,b,c;
@@ -155,68 +151,66 @@ int main(int argc,char*argv[])
 	char sym;
 	int menu,rmenu,smenu;
 
+    do{
+    	printf("\n======\n");
+    	printf("Menu\n");
+    	printf("======\n");
+    	printf("1.Regular Calculator\n");
+    	printf("2.Scientific Calculator\n");
+    	printf("3.Acountant Calculator\n");
+    	printf("4.Read Help and Notice\n");
+    	printf("0.Exit\n");
+    	menu = input("Select Menu: ");//input main menu
+    	system("clear");
 
-do{
-	printf("\n======\n");
-	printf("Menu\n");
-	printf("======\n");
-	printf("1.Regular Calculator\n");
-	printf("2.Scientific Calculator\n");
-	printf("3.Acountant Calculator\n");
-	printf("4.Read Help and Notice\n");
-	printf("0.Exit\n");
-	menu = input("Select Menu: ");//input main menu
-	system("clear");
+        if(menu == 1){
 
-if(menu==1){
+            do{
+            	printf("\n======================\n");
+            	printf("Regular Calculator Menu\n");
+            	printf("=======================\n");
+            	printf("1.PLUS\n");
+            	printf("2.MINUS\n");
+            	printf("3.MULTIPLY\n");
+            	printf("4.DIVIDE\n");
+            	printf("0.BACK\n");
+            	rmenu = input("Select Menu: ");//input regular  menu
+            	system("clear");
 
-do{
-	printf("\n======================\n");
-	printf("Regular Calculator Menu\n");
-	printf("=======================\n");
-	printf("1.PLUS\n");
-	printf("2.MINUS\n");
-	printf("3.MULTIPLY\n");
-	printf("4.DIVIDE\n");
-	printf("0.BACK\n");
-	rmenu = input("Select Menu: ");//input regular  menu
-	system("clear");
+                if(rmenu == 1){
+            		a = input("Enter value 1 st: ");
+            		b = input("Enter value 2 nd: ");
+            		c = plus(a,b);
+            		printf("\n");
+            		print("sum of","plus",a,b,c);
+            	}
 
+            	if(rmenu == 2){
+            		a = input("Enter value 1 st: ");
+            		b = input("Enter value 2 nd: ");
+            		c = minus(a,b);
+            		printf("\n");
+            		print("result of","minus",a,b,c);
+            	}
 
-	if(rmenu==1){
-		a=input("Enter value 1 st: ");
-		b=input("Enter value 2 nd: ");
-		c=plus(a,b);
-		printf("\n");
-		print("sum of","plus",a,b,c);
-	}
+            	if(rmenu == 3){
+            		a = input("Enter value 1 st: ");
+            		b = input("Enter value 2 nd: ");
+            		c = mult(a,b);
+            		printf("\n");
+            		print("result of","x",a,b,c);
+            	}
 
-	if(rmenu==2){
-		a=input("Enter value 1 st: ");
-		b=input("Enter value 2 nd: ");
-		c=minus(a,b);
-		printf("\n");
-		print("result of","minus",a,b,c);
-	}
+            	if(rmenu == 4){
+            		a = input("Enter value 1 st: ");
+            		b = input("Enter value 2 nd: ");
+            		c = divind(a,b);
+            		printf("\n");
+            		print("result","/",a,b,c);
+            	}
 
-	if(rmenu==3){
-		a=input("Enter value 1 st: ");
-		b=input("Enter value 2 nd: ");
-		c=mult(a,b);
-		printf("\n");
-		print("result of","x",a,b,c);
-	}
-
-	if(rmenu==4){
-		a=input("Enter value 1 st: ");
-		b=input("Enter value 2 nd: ");
-		c=divind(a,b);
-		printf("\n");
-		print("result","/",a,b,c);
-	}
-
-}while(rmenu!=0);
-}
+            }while(rmenu != 0);
+        }
 
 if(menu==2){
 
