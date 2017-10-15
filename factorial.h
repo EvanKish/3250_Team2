@@ -1,14 +1,17 @@
-#include <stdio.h>
-#include <stdint.h>
+/**
+ * @file factorial.h
+ * @description Functions to calculate factorials
+ * @author
+ */
 
-    unsigned long long int fact(int n){/*Factorial function inefficient for values after 20*/
-    unsigned long long int fact;
-    int i;
-    fact=1;
+#ifndef FACTORIAL_H
+#define FACTORIAL_H
 
-    for(i=n;i>0;i--){
-        fact*=i;
-    }
-    return fact;
-    }
+/**
+ * Calculates factorial
+ * @param n Number to calculate upon
+ * @return n!, the factorial of n
+ */
+unsigned long long int fact(int n);
 
+#endif
