@@ -209,107 +209,113 @@ int main(int argc,char*argv[]){
             }while(rmenu != 0);
         }
 
-if(menu==2){
+        if(menu==2){
 
-	do{
-		printf("\n===========================\n");
-		printf("Scientific Calculator Menu\n");
-		printf("===========================\n");
-		printf("1.Power function (x^y)\n");
-		printf("2.Factorial Series (x!)\n");
-		printf("3.Fibonacci Series \n");
-		printf("4.Sine (Sin x)\n");
-		printf("5.Cosine (cos x)\n");
-		printf("6.Tangent (Tan x)\n");
-		printf("7.Cosec (cosec x)\n");
-		printf("8.Sec (sec x)\n");
-		printf("9.Cot (cot x)\n");
-		printf("10.Matrix functions\n");
-		printf("11.Conversion functions\n");
-		printf("0.Back\n");
-		smenu = input("Select Menu: ");
-		system("clear");
+            do{
+                printf("\n===========================\n");
+                printf("Scientific Calculator Menu\n");
+                printf("===========================\n");
+                printf("1.Power function (x^y)\n");
+                printf("2.Factorial Series (x!)\n");
+                printf("3.Fibonacci Series \n");
+                printf("4.Sine (Sin x)\n");
+                printf("5.Cosine (cos x)\n");
+                printf("6.Tangent (Tan x)\n");
+                printf("7.Cosec (cosec x)\n");
+                printf("8.Sec (sec x)\n");
+                printf("9.Cot (cot x)\n");
+                printf("10.Matrix functions\n");
+                printf("11.Conversion functions\n");
+                printf("0.Back\n");
+                smenu = input("Select Menu: ");
+                system("clear");
 
-	if(smenu==1){
-		a=input("Enter base(x): ");
-		b=input("Enter power(y): ");
-		c=powerfn(a,b);
-		printf("\n");
-		print("result of","^",a,b,c);
-	}
+                if(smenu==1){
+                    a=input("Enter base(x): ");
+                    b=input("Enter power(y): ");
+                    c=powerfn(a,b);
+                    printf("\n");
+                    print("result of","^",a,b,c);
+                }
 
-	if(smenu==2){
-		a=input("Enter numbers of term: ");
-		c=fact(a);
-		printf("\n");
-		spprint("Factorial of","!",a,c);
-	}
+                if(smenu==2){
+                    a=input("Enter numbers of term: ");
+                    c=fact(a);
+                    printf("\n");
+                    spprint("Factorial of","!",a,c);
+                }
 
-	if(smenu==3){
-		a=input("Enter numbers of term: ");
-		c=fib(a);
-		printf("\n");
-		spprint("Fibonacci of"," ",a,c);
-	}
+                if(smenu==3){
+                    a=input("Enter numbers of term: ");
+                    c=fib(a);
+                    printf("\n");
+                    spprint("Fibonacci of"," ",a,c);
+                }
 
-	if(smenu==4){
-		a=input("Enter your value: ");
-		c=sine(a);
-		printf("\n");
-		spprintf("Sine of"," ",a,c);
-	}
+                if(smenu==4){
+                    a=input("Enter your value: ");
+                    c=sine(a);
+                    printf("\n");
+                    spprintf("Sine of"," ",a,c);
+                }
 
-	if(smenu==5){
-		a=input("Enter your value: ");
-		c=cosine(a);
-		printf("\n");
-		spprintf("Cosine of"," ",a,c);
-	}
+                if(smenu==5){
+                    a=input("Enter your value: ");
+                    c=cosine(a);
+                    printf("\n");
+                    spprintf("Cosine of"," ",a,c);
+                }
 
-	if(smenu==6){
-		a=input("Enter your value: ");
-		r1=sine(a);
-		r2=cosine(a);
-		c=r1/r2;
-		printf("\n");
-		spprintf("Tangent of"," ",a,c);
-	}
+                if(smenu==6){
+                    a=input("Enter your value: ");
+                    r1=sine(a);
+                    r2=cosine(a);
+                    c=r1/r2;
+                    printf("\n");
+                    spprintf("Tangent of"," ",a,c);
+                }
 
-	if(smenu==7){
-		a=input("Enter your value: ");
-		c=sine(a);
-		printf("\n");
-		spprintf("Cosec of"," ",a,1/c);
-	}
+                if(smenu==7){
+                    a=input("Enter your value: ");
+                    c=sine(a);
+                    printf("\n");
+                    spprintf("Cosec of"," ",a,1/c);
+                }
 
-	if(smenu==5){
-		a=input("Enter your value: ");
-		c=cosine(a);
-		printf("\n");
-		spprintf("Sec of"," ",a,1/c);
-	}
+                if(smenu==5){
+                    a=input("Enter your value: ");
+                    c=cosine(a);
+                    printf("\n");
+                    spprintf("Sec of"," ",a,1/c);
+                }
 
-	if(smenu==8){
-		a=input("Enter your value: ");
-		r1=sine(a);
-		r2=cosine(a);
-		c=r1/r2;
-		printf("\n");
-		spprintf("Cot of"," ",a,1/c);
-	}
+                if(smenu==8){
+                    a=input("Enter your value: ");
+                    r1=sine(a);
+                    r2=cosine(a);
+                    c=r1/r2;
+                    printf("\n");
+                    spprintf("Cot of"," ",a,1/c);
+                }
 
-	if(smenu==10){
-		int operation_number=0;
-		       printf("\n\t\tSum of Matrices(1)\t\tTranspose(2)\t\tProduct of Matrices(3)");
-       printf("\n\tEnter an operation command:");
-       scanf("%d",&operation_number);
+                if(smenu==10){
+                    int operation_number=0;
+                    printf("\n\t\tSum of Matrices(1)\t\tTranspose(2)\t\tProduct of Matrices(3)");
+                    printf("\n\tEnter an operation command:");
+                    scanf("%d",&operation_number);
 
-      switch(operation_number){
-       case 1: matrix_sum();break;
-       case 2: matrix_transpose();break;
-       case 3: matrix_product();break;
-       }
-	}
+                    switch(operation_number){
+                        case 1:
+                            matrix_sum();
+                            break;
+                        case 2:
+                            matrix_transpose();
+                            break;
+                        case 3:
+                            matrix_product();
+                            break;
+                       }
+                }
 
 	if(smenu==11){
 		int operation_number=0;
