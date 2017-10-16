@@ -430,7 +430,7 @@ for(i=0;i<n;i++){
 		/**
 		 * This portion of the program outputs a menu, gathers the 
 		 * input from the user, and outputs the appropriate response.
-		 */
+		 */ s
 
 		 do {
 			printf("\n===========================\n");
