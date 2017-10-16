@@ -313,26 +313,36 @@ if(menu==2){
        }
 	}
 
-	if(smenu==11){
+	if(smenu==11) {
+
 		int operation_number=0;
-		        printf("\n\n\n\t\tTemperature(1)\t\tTime(2)");
+
+		printf("\n\n\n\t\tTemperature(1)\t\tTime(2)");
         printf("\n\n\n\t\tPlease choose an operation number:");
         scanf("%d",&operation_number);
 
-        switch(operation_number){
-            case 1: temp();break;
-            case 2: time();break;
-        }
-        break;
+        switch(operation_number) {
 
+            case 1: 
+            temp();
+            break;
+            case 2: 
+            time();
+            break;
+        }
+
+        break;
 	}
 
 
 
-}while(smenu!=0);
+} 
+
+while (smenu!=0);
+
 }
 
-if(menu==3){
+if(menu==3) {
 
 	warp:
 
@@ -348,18 +358,22 @@ if(menu==3){
 	float med,mod,count;
 	int temp;
 
-		n=input("Enter number of term: ");
+	n=input("Enter number of term: ");
 
 	float set[n];
 	int numtemp[n];
 
-	 for(i=0;i<n;i++){
+	 for(i=0;i<n;i++) {
+
 		set[i]=inputAry("Enter value terms",i);
 	}
 
 	 for(i=0;i<n;i++){
+
 	 	 for(j=0;j<=i;j++){
-     			 if(set[j]>set[i]){
+
+     			if(set[j]>set[i]) {
+
 				rest=set[j];
 				set[j]=set[i];
 				set[i]=rest;
@@ -370,15 +384,20 @@ if(menu==3){
 min = set[0];
 max = set[n-1];
 
-for(i=0;i<n;i++){
+for(i=0;i<n;i++) {
+
 	sum+=set[i];
 }
+
 x_bar=(sum/n);
 
 if((n%2)!=0){
+
 	med=set[((n+1)/2)-1];
 }
-else{
+
+else {
+
 	med=(set[((n+1)/2)]+set[((n+1)/2)-1])/2;
 }
 
@@ -386,8 +405,11 @@ for(i=0;i<n;i++){
 	numtemp[i]=0;
 }
 for(i=0;i<n;i++){
+	
 	temp=set[i];
+
 	for(j=i;j<n;j++){
+
 	if(set[j]==temp){
 		numtemp[i]++;
 	}
@@ -395,8 +417,11 @@ for(i=0;i<n;i++){
 }
 
 temp=numtemp[0];
+
 for(i=1;i<n;i++){
+
 	if(numtemp[i]>temp){
+
 		temp = numtemp[i];
 	}
 }
@@ -407,7 +432,9 @@ warp1://Warp form menu
 j=0;
 
 for(i=0;i<n;i++){
+
 	if(numtemp[i]==temp){
+
 		j++;
 	}
 }
