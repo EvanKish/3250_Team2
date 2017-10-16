@@ -110,7 +110,12 @@ float sine(float radius)
 		sin=val-(power(val,3)/factorial(3))+(power(val,5)/factorial(5))-(power(val,7)/factorial(7));
 	return sin;
 }
-
+/**BEGINNING OF PAM'S PART**/
+/**
+ * Computes cosine value
+ * @param radius is a float
+ * @return calculated cosine
+ */
 float cosine(float radius){
     float val, cos;
     val = radius * (PI/180);        
@@ -118,24 +123,52 @@ float cosine(float radius){
     return cos;
 }
 
+/**
+ * Prints result of factorial or fibonacci
+ *@param screen is a pointer to a char
+ *@param sym is a pointer to a char
+ *@param ini is an int
+ *@param res is an int
+ */
 int spprint(char*screen, char*sym, int ini, int res){
     printf("%s %d%s = %d\n",screen,ini,sym,res);
 	
     return 0;
 }
 
+/**
+ * Prints result of Sine, Cosine, Tangent, Cosecant, Secant, or Cotangent
+ *@param screen is a pointer to a char
+ *@param sym is a pointer to a char
+ *@param ini is an int
+ *@param res is an int
+ */
 float spprintf(char*screen, char*sym, float ini, float res){
     printf("%s %.4f%s = %.4f\n",screen,ini,sym,res);
 
     return 0;
 }
 
+/**
+ * Prints result of multiplication, subtraction, addition, division, and power
+ *@param screen is a pointer to a char
+ *@param sym is a pointer to a char
+ *@param ini is an int
+ *@param res is an int
+ */
 float print(char*screen, char*sym, float ini, float upt, float res){
     printf("%s %.4f %s %.4f = %.4f\n",screen,ini,sym,upt,res);
 
     return 0;
 }
 
+/**
+ * Prints range, x_bar, max and min
+ *@param screen is a pointer to a char
+ *@param sym is a pointer to a char
+ *@param ini is an int
+ *@param res is an int
+ */
 float Aryprint(char*screen, float ans){
     printf("%s : %.4f\n",screen,ans);
 
@@ -208,7 +241,7 @@ int main(int argc,char*argv[]){
 
             }while(rmenu != 0);
         }
-
+/**END OF PAM'S PART**/
 if(menu==2){
 
 	do{
