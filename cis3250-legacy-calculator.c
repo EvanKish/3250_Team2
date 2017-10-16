@@ -111,8 +111,7 @@ float sine(float radius)
 	return sin;
 }
 
-float cosine(float radius)
-{
+float cosine(float radius){
     float val, cos;
     val = radius * (PI/180);        
     cos = 1 - (power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
@@ -143,8 +142,7 @@ float Aryprint(char*screen, float ans){
     return 0;
 }
  
-int main(int argc,char*argv[])
-{
+int main(int argc,char*argv[]){
     float a,b,c;
     float r1,r2;
     char sym;
