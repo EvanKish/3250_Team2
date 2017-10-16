@@ -318,23 +318,24 @@ if(menu==2){
 		int operation_number=0;
 
 		printf("\n\n\n\t\tTemperature(1)\t\tTime(2)");
+
         printf("\n\n\n\t\tPlease choose an operation number:");
+
         scanf("%d",&operation_number);
 
         switch(operation_number) {
 
             case 1: 
-            temp();
-            break;
+            	temp();
+            	break;
+
             case 2: 
-            time();
-            break;
+            	time();
+            	break;
         }
 
         break;
 	}
-
-
 
 } 
 
@@ -358,7 +359,7 @@ if(menu==3) {
 	float med,mod,count;
 	int temp;
 
-	n=input("Enter number of term: ");
+	n = input("Enter number of term: ");
 
 	float set[n];
 	int numtemp[n];
@@ -401,18 +402,21 @@ else {
 	med=(set[((n+1)/2)]+set[((n+1)/2)-1])/2;
 }
 
-for(i=0;i<n;i++){
+for(i=0;i<n;i++) {
+	
 	numtemp[i]=0;
 }
 for(i=0;i<n;i++){
-	
+
 	temp=set[i];
 
 	for(j=i;j<n;j++){
 
-	if(set[j]==temp){
-		numtemp[i]++;
-	}
+		if(set[j]==temp){
+
+			numtemp[i]++;
+		
+		}
 	}
 }
 
