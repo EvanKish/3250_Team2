@@ -337,9 +337,7 @@ if(menu==2){
         break;
 	}
 
-} 
-
-while (smenu!=0);
+} while (smenu!=0);
 
 }
 
@@ -354,33 +352,33 @@ if(menu==3) {
 		printf("Please set value first\n");
 		printf("\n");
 
-	int n,i,j,amenu;
-	float rest,max,min,x_bar=0,sum=0;
-	float med,mod,count;
-	int temp;
+		int n,i,j,amenu;
+		float rest,max,min,x_bar=0,sum=0;
+		float med,mod,count;
+		int temp;
 
-	n = input("Enter number of term: ");
+		n = input("Enter number of term: ");
 
-	float set[n];
-	int numtemp[n];
+		float set[n];
+		int numtemp[n];
 
-	 for(i=0;i<n;i++) {
+		 for(i=0;i<n;i++) {
 
-		set[i]=inputAry("Enter value terms",i);
-	}
+			set[i]=inputAry("Enter value terms",i);
+		}
 
-	 for(i=0;i<n;i++){
+		 for(i=0;i<n;i++){
 
-	 	 for(j=0;j<=i;j++){
+		 	 for(j=0;j<=i;j++){
 
-     			if(set[j]>set[i]) {
+	     			if(set[j]>set[i]) {
 
-				rest=set[j];
-				set[j]=set[i];
-				set[i]=rest;
- 			 }
-  		}
-  	}
+					rest=set[j];
+					set[j]=set[i];
+					set[i]=rest;
+	 			 }
+	  		}
+	  	}
 
 min = set[0];
 max = set[n-1];
@@ -420,7 +418,7 @@ for(i=0;i<n;i++){
 	}
 }
 
-temp=numtemp[0];
+temp = numtemp[0];
 
 for(i=1;i<n;i++){
 
