@@ -9,9 +9,7 @@
 #include "conversions.h"
 #include <string.h>
 
-        FILE
-*
-help;
+FILE *help;
 
 
 float input(char *inname) {
@@ -515,12 +513,11 @@ int main(int argc, char *argv[]) {
         }
 
         /*
-         * Runs the overarching menu program while the user does not choose to quit
-         * (Option 0: Exit)
-         */
+        * Runs the overarching menu program while the user does not choose to quit
+        * (Option 0: Exit)
+        */
 
     } while (menu != 0);
 
     return 0;
 }
-
