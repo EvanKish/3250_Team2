@@ -350,71 +350,71 @@ if(menu==3) {
 
 	warp:
 
-		printf("\n===========================\n");
-		printf("Accountant Calculator Menu\n");
-		printf("===========================\n");
-		printf("Please set value first\n");
-		printf("\n");
+	printf("\n===========================\n");
+	printf("Accountant Calculator Menu\n");
+	printf("===========================\n");
+	printf("Please set value first\n");
+	printf("\n");
 
-		int n,i,j,amenu;
-		float rest,max,min;
-		float x_bar = 0;
-		float sum = 0;
-		float med,mod,count;
-		int temp;
+	int n,i,j,amenu;
+	float rest,max,min;
+	float x_bar = 0;
+	float sum = 0;
+	float med,mod,count;
+	int temp;
 
-		n = input("Enter number of term: ");
+	n = input("Enter number of term: ");
 
-		float set[n];
-		int numtemp[n];
-
-		for(i=0;i<n;i++) {
-
-			set[i]=inputAry("Enter value terms", i);
-		}
-
-		for(i=0;i<n;i++) {
-
-		 	for(j=0;j<=i;j++) {
-
-	     		if(set[j]>set[i]) {
-
-					rest=set[j];
-
-					set[j]=set[i];
-
-					set[i]=rest;
-	 			}
-	  		}
-	  	}
-
-	min = set[0];
-	max = set[n-1];
+	float set[n];
+	int numtemp[n];
 
 	for(i=0;i<n;i++) {
 
-		sum += set[i];
-	}
-
-	x_bar = (sum/n);
-
-	if((n%2)!=0){
-
-		med = set[((n+1)/2)-1];
-
-	} else {
-
-		med = (set[((n+1)/2)] + set[((n+1)/2)-1]) / 2;
-	}
-
-	for(i=0;i<n;i++) {
-		
-		numtemp[i] = 0;
+		set[i]=inputAry("Enter value terms", i);
 	}
 
 	for(i=0;i<n;i++) {
 
-		temp = set[i];
+	 	for(j=0;j<=i;j++) {
+
+     		if(set[j]>set[i]) {
+
+				rest=set[j];
+
+				set[j]=set[i];
+
+				set[i]=rest;
+ 			}
+  		}
+  	}
+
+min = set[0];
+max = set[n-1];
+
+for(i=0;i<n;i++) {
+
+	sum += set[i];
+}
+
+x_bar = (sum/n);
+
+if((n%2)!=0){
+
+	med = set[((n+1)/2)-1];
+
+} else {
+
+	med = (set[((n+1)/2)] + set[((n+1)/2)-1]) / 2;
+}
+
+for(i=0;i<n;i++) {
+	
+	numtemp[i] = 0;
+}
+
+for(i=0;i<n;i++) {
+
+	temp = set[i];
 
 	for(j=i;j<n;j++){
 
