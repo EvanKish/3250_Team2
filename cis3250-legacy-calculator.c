@@ -372,21 +372,22 @@ if(menu==3) {
 
 		set[i]=inputAry("Enter value terms", i);
 	}
+}
 
-	for(i=0;i<n;i++) {
+for(i=0;i<n;i++) {
 
-	 	for(j=0;j<=i;j++) {
+ 	for(j=0;j<=i;j++) {
 
-     		if(set[j]>set[i]) {
+ 		if(set[j]>set[i]) {
 
-				rest=set[j];
+			rest=set[j];
 
-				set[j]=set[i];
+			set[j]=set[i];
 
-				set[i]=rest;
- 			}
-  		}
-  	}
+			set[i]=rest;
+		}
+	}
+}
 
 min = set[0];
 max = set[n-1];
