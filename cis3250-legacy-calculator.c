@@ -113,37 +113,37 @@ float sine(float radius)
 /**BEGINNING OF PAM'S PART**/
 /**
  * Computes cosine value
- * @param radius is a float
+ * @param radius is float provided by user
  * @return calculated cosine
  */
-float cosine(float radius){
-    float val, cos;
-    val = radius * (PI/180);        
-    cos = 1 - (power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
+float cosine(float radius) {
+    float val = radius * (PI/180);        
+    float cos = 1 - (power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
+	
     return cos;
 }
 
 /**
  * Prints result of factorial or fibonacci
- *@param screen is a pointer to a char
- *@param sym is a pointer to a char
- *@param ini is an int
- *@param res is an int
+ *@param screen is the beginning of the message to be printed
+ *@param sym is an ! for factorial or a space for fibonacci
+ *@param ini is specified by the user
+ *@param res is the calculated result
  */
-int spprint(char*screen, char*sym, int ini, int res){
-    printf("%s %d%s = %d\n",screen,ini,sym,res);
+int spprint(char* screen, char* sym, int ini, int res) {
+    printf("%s %d%s = %d\n",screen,ini,sym,res);	
 	
     return 0;
 }
 
 /**
  * Prints result of Sine, Cosine, Tangent, Cosecant, Secant, or Cotangent
- *@param screen is a pointer to a char
- *@param sym is a pointer to a char
- *@param ini is an int
- *@param res is an int
+ *@param screen is the beginning of the message to be printed
+ *@param sym is a symbol designating the function chosen
+ *@param ini is specified by the user
+ *@param res is the calculated result
  */
-float spprintf(char*screen, char*sym, float ini, float res){
+float spprintf(char* screen, char* sym, float ini, float res) {
     printf("%s %.4f%s = %.4f\n",screen,ini,sym,res);
 
     return 0;
@@ -151,12 +151,12 @@ float spprintf(char*screen, char*sym, float ini, float res){
 
 /**
  * Prints result of multiplication, subtraction, addition, division, and power
- *@param screen is a pointer to a char
- *@param sym is a pointer to a char
- *@param ini is an int
- *@param res is an int
+ *@param screen is the beginning of the message to be printed
+ *@param sym is a symbol designating the function chosen
+ *@param ini is specified by the user
+ *@param res is the calculated result
  */
-float print(char*screen, char*sym, float ini, float upt, float res){
+float print(char* screen, char* sym, float ini, float upt, float res) {
     printf("%s %.4f %s %.4f = %.4f\n",screen,ini,sym,upt,res);
 
     return 0;
@@ -164,22 +164,25 @@ float print(char*screen, char*sym, float ini, float upt, float res){
 
 /**
  * Prints range, x_bar, max and min
- *@param screen is a pointer to a char
- *@param sym is a pointer to a char
- *@param ini is an int
- *@param res is an int
+ *@param screen is the beginning of the message to be printed
+ *@param ans is the calculated result
  */
-float Aryprint(char*screen, float ans){
+float Aryprint(char* screen, float ans) {
     printf("%s : %.4f\n",screen,ans);
 
     return 0;
 }
  
-int main(int argc,char*argv[]){
-    float a,b,c;
-    float r1,r2;
+int main(int argc, char* argv[]) {
+    float a = 0;
+    float b = 0;
+    float c = 0;
+    float r1 = 0;
+    float r2 = 0;
     char sym;
-    int menu,rmenu,smenu;
+    int menu = 0;
+    int rMenu = 0;
+    int sMenu = 0;
 
     do{
     	printf("\n======\n");
@@ -204,10 +207,10 @@ int main(int argc,char*argv[]){
             	printf("3.MULTIPLY\n");
             	printf("4.DIVIDE\n");
             	printf("0.BACK\n");
-            	rmenu = input("Select Menu: ");
+            	rMenu = input("Select Menu: ");
             	system("clear");
 
-                if(rmenu == 1){
+                if(rMenu == 1){
             		a = input("Enter value 1 st: ");
             		b = input("Enter value 2 nd: ");
             		c = plus(a,b);
@@ -215,7 +218,7 @@ int main(int argc,char*argv[]){
             		print("sum of","plus",a,b,c);
             	}
 
-            	if(rmenu == 2){
+            	if(rMenu == 2){
             		a = input("Enter value 1 st: ");
             		b = input("Enter value 2 nd: ");
             		c = minus(a,b);
@@ -223,7 +226,7 @@ int main(int argc,char*argv[]){
             		print("result of","minus",a,b,c);
             	}
 
-            	if(rmenu == 3){
+            	if(rMenu == 3){
             		a = input("Enter value 1 st: ");
             		b = input("Enter value 2 nd: ");
             		c = mult(a,b);
@@ -231,7 +234,7 @@ int main(int argc,char*argv[]){
             		print("result of","x",a,b,c);
             	}
 
-            	if(rmenu == 4){
+            	if(rMenu == 4){
             		a = input("Enter value 1 st: ");
             		b = input("Enter value 2 nd: ");
             		c = divind(a,b);
@@ -239,7 +242,7 @@ int main(int argc,char*argv[]){
             		print("result","/",a,b,c);
             	}
 
-            }while(rmenu != 0);
+            }while(rMenu != 0);
         }
 /**END OF PAM'S PART**/
 if(menu==2){
