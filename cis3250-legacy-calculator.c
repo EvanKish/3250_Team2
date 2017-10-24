@@ -213,7 +213,7 @@ int main(int argc,char*argv[])
 
 if(menu==2){
 
-	do{
+	do {
 		printf("\n===========================\n");
 		printf("Scientific Calculator Menu\n");
 		printf("===========================\n");
@@ -321,7 +321,7 @@ if(menu==2){
 
         printf("\n\n\n\t\tPlease choose an operation number:");
 
-        scanf("%d" ,&operation_number);
+        scanf("%d", &operation_number);
 
         switch(operation_number) {
 
@@ -338,17 +338,18 @@ if(menu==2){
         }
 
         break;
-	}
+    }
 
 } while (smenu!=0);
+//end of do-while loop
 
 }
+//end of if(menu==2)
 
 if(menu==3) {
 
 	warp:
 
-		//system("clear");
 		printf("\n===========================\n");
 		printf("Accountant Calculator Menu\n");
 		printf("===========================\n");
@@ -417,10 +418,9 @@ if(menu==3) {
 
 	for(j=i;j<n;j++){
 
-		if(set[j]==temp){
+		if(set[j]==temp) {
 
 			numtemp[i]++;
-
 		}
 	}
 }
