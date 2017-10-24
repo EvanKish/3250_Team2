@@ -332,7 +332,7 @@ if(menu==2){
             case 2: 
             	time();
             	break;
-            	
+
             default:
             	break;
         }
@@ -367,18 +367,14 @@ if(menu==3) {
 		float set[n];
 		int numtemp[n];
 
-		 for(i=0;i<n;i++) {
-
+		for(i=0;i<n;i++) {
 
 			set[i]=inputAry("Enter value terms", i);
-
 		}
 
 		for(i=0;i<n;i++) {
 
-
 		 	for(j=0;j<=i;j++) {
-
 
 	     		if(set[j]>set[i]) {
 
@@ -404,6 +400,7 @@ if(menu==3) {
 	if((n%2)!=0){
 
 		med = set[((n+1)/2)-1];
+
 	} else {
 
 		med = (set[((n+1)/2)] + set[((n+1)/2)-1]) / 2;
@@ -413,7 +410,7 @@ if(menu==3) {
 		
 		numtemp[i] = 0;
 	}
-	
+
 	for(i=0;i<n;i++) {
 
 		temp = set[i];
@@ -423,7 +420,7 @@ if(menu==3) {
 		if(set[j]==temp){
 
 			numtemp[i]++;
-		
+
 		}
 	}
 }
