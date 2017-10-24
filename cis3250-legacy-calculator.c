@@ -332,6 +332,9 @@ if(menu==2){
             case 2: 
             	time();
             	break;
+            	
+            default:
+            	break;
         }
 
         break;
