@@ -321,7 +321,7 @@ if(menu==2){
 
         printf("\n\n\n\t\tPlease choose an operation number:");
 
-        scanf("%d",&operation_number);
+        scanf("%d" ,&operation_number);
 
         switch(operation_number) {
 
@@ -353,7 +353,9 @@ if(menu==3) {
 		printf("\n");
 
 		int n,i,j,amenu;
-		float rest,max,min,x_bar=0,sum=0;
+		float rest,max,min;
+		float x_bar = 0;
+		float sum = 0;
 		float med,mod,count;
 		int temp;
 
@@ -364,49 +366,54 @@ if(menu==3) {
 
 		 for(i=0;i<n;i++) {
 
-			set[i]=inputAry("Enter value terms",i);
+
+			set[i]=inputAry("Enter value terms", i);
+
 		}
 
-		 for(i=0;i<n;i++){
+		for(i=0;i<n;i++) {
 
-		 	 for(j=0;j<=i;j++){
 
-	     			if(set[j]>set[i]) {
+		 	for(j=0;j<=i;j++) {
+
+
+	     		if(set[j]>set[i]) {
 
 					rest=set[j];
+
 					set[j]=set[i];
+
 					set[i]=rest;
-	 			 }
+	 			}
 	  		}
 	  	}
 
-min = set[0];
-max = set[n-1];
+	min = set[0];
+	max = set[n-1];
 
-for(i=0;i<n;i++) {
+	for(i=0;i<n;i++) {
 
-	sum+=set[i];
-}
+		sum += set[i];
+	}
 
-x_bar=(sum/n);
+	x_bar = (sum/n);
 
-if((n%2)!=0){
+	if((n%2)!=0){
 
-	med=set[((n+1)/2)-1];
-}
+		med = set[((n+1)/2)-1];
+	} else {
 
-else {
+		med = (set[((n+1)/2)] + set[((n+1)/2)-1]) / 2;
+	}
 
-	med=(set[((n+1)/2)]+set[((n+1)/2)-1])/2;
-}
-
-for(i=0;i<n;i++) {
+	for(i=0;i<n;i++) {
+		
+		numtemp[i] = 0;
+	}
 	
-	numtemp[i]=0;
-}
-for(i=0;i<n;i++){
+	for(i=0;i<n;i++) {
 
-	temp=set[i];
+		temp = set[i];
 
 	for(j=i;j<n;j++){
 
