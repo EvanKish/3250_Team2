@@ -526,4 +526,6 @@ for(i=0;i<n;i++){
     }while(menu!=0);
 
     return 0;
-}
+ }
+
+    
