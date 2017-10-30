@@ -418,17 +418,17 @@ for(i=0;i<n;i++){
 		j++;
 	}
 }
-
-            if(j==1) {
-                for(i=0;i<n;i++) {
-                    if(numTemp[i]==temp) {
-                        printf("%.4f\n",set[i]);
-                    }
+	/*this small part might be off in alignment rn, I'm waiting for the above code to be realigned so I know where this goes (This comment while be deleted when I do that thing)*/
+        if(j==1) {
+            for(i=0;i<n;i++) {
+                if(numTemp[i]==temp) {
+                    printf("%.4f\n",set[i]);
                 }
-            } else {
-                printf("Not have mode value\n");
             }
+        } else {
+            printf("Not have mode value\n");
         }
+    }
 
         /**
          * This portion of the program outputs a menu, gathers the
@@ -527,7 +527,7 @@ for(i=0;i<n;i++){
      * (Option 0: Exit)
      */
 
-    }while(menu!=0);
+    } while(menu!=0);
 
     return 0;
 }
