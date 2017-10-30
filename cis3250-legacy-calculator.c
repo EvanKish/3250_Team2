@@ -523,8 +523,8 @@ for(i=0;i<n;i++){
      * (Option 0: Exit)
      */
 
-    }while(menu!=0);
+    } while(menu!=0);
 
     return 0;
- }
+}
    
