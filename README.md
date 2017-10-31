@@ -1,16 +1,15 @@
 # 3250_Team2
-# 3250_Team2
 
 This program is multi functional calculator. It can be used as a regular calculator, scientific calculator or accountant calculator depending on user's needs. Allows user to do calculations depending on which calculator they choose. Supported calculations include the following:
 
-Regular Calculator Functions:
+**Regular Calculator Functions:**
 
 1. addition
 2. subtraction
 3. multiplication
 4. division
 
-Scientific Calculator Functions:
+**Scientific Calculator Functions:**
 
 1. powers
 2. factorial
@@ -24,7 +23,7 @@ Scientific Calculator Functions:
 10. matrix functions
 11. conversion functions
 
-Accountant Calculator Functions:
+**Accountant Calculator Functions:**
 
 1. show max
 2. show min
@@ -34,5 +33,7 @@ Accountant Calculator Functions:
 6. show mode
 7. show value
 8. set new value
+
+**How to Run**
 
 To compile the program on the command line you can type in "make" or "make default". This would create an executable called run in the bin folder. To run the calculator, you can go to the bin folder and type in "./run" or to run from the root folder you can type in "./bin/run"
