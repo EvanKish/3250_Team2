@@ -13,4 +13,6 @@
  * @param exponent Exponent
  * @return base^exponent
  */
-double power(double base, int exponent);
+float power(float base, int exponent);
+
+#endif

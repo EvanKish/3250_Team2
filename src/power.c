@@ -6,8 +6,8 @@
 
 #include "power.h"
 
-double power(double base, int exponent) {
-    double result = 1;
+float power(float base, int exponent) {
+    float result = 1;
 
     for(int i = 1; i <= exponent; i++) {
         result *= base;
