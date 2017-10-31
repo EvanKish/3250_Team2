@@ -11,7 +11,6 @@
 
 
 FILE *help;
-
 /*
  *Function Takes user input
  *@param inputName takes the type of input title and displays to user
@@ -36,7 +35,6 @@ float input(char *inputName) {
 
     } while (1);
 }
-
 /*
  *Function takes input for accountant calulator
  *@param inputName takes in title of input (char*)
@@ -61,7 +59,6 @@ float inputAccountCalculator(char *inputName, int num) {
     } while (1);
 
 }
-
 /*
  *Function adds passed input
  *@param adder is flaot passed and is first added number (float)
@@ -75,7 +72,6 @@ float plus(float adder, float addIn) {
 
     return result;
 }
-
 /*
  *Function subtracts passed input
  *@param firstMinus is number to subtract
@@ -103,7 +99,6 @@ float mult(float multO, float multN) {
 
     return result;
 }
-
 /*
  *Function divides passed input
  *@param divider is be be divided (float)
@@ -117,7 +112,6 @@ float divind(float divider, float dividIn) {
 
     return result;
 }
-
 /*
  *Function Takes and calculates factorials
  *@param term is integer
@@ -131,7 +125,6 @@ int factorial(int term) {
 
     return term * factorial(term - 1);
 }
-
 /*
  *Function calculates the fib function
  *@param term will be passed as int
@@ -147,7 +140,6 @@ int fib(int term) {
     }
     return fib(term - 1) + fib(term - 2);
 }
-
 /*
  *Function calculates the power of
  *@param  base will be passed as float
@@ -163,7 +155,6 @@ float power(float base, int pow) {
     }
     return mem;
 }
-
 /*
  *Function calculates the sine function
  *@param radius will be passed as float
@@ -177,7 +168,6 @@ float sine(float radius) {
             (power(val, 7) / factorial(7));
     return sin;
 }
-
 float cosine(float radius) {
     float val, cos;
     val = radius * (PI / 180);
