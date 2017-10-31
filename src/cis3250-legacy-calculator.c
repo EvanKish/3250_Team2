@@ -136,7 +136,7 @@ int main(int argc, char *argv[]) {
     float a, b, c;
     float r1, r2;
     char sym;
-    int menu, rmenu, smenu;
+    int menu, rMenu, sMenu;
 
     do {
         printf("\n======\n");
@@ -161,10 +161,10 @@ int main(int argc, char *argv[]) {
                 printf("3.MULTIPLY\n");
                 printf("4.DIVIDE\n");
                 printf("0.BACK\n");
-                rmenu = input("Select Menu: ");
+                rMenu = input("Select Menu: ");
                 system("clear");
 
-                if (rmenu == 1) {
+                if (rMenu == 1) {
                     a = input("Enter value 1 st: ");
                     b = input("Enter value 2 nd: ");
                     c = plus(a, b);
@@ -172,7 +172,7 @@ int main(int argc, char *argv[]) {
                     print("sum of", "plus", a, b, c);
                 }
 
-                if (rmenu == 2) {
+                if (rMenu == 2) {
                     a = input("Enter value 1 st: ");
                     b = input("Enter value 2 nd: ");
                     c = minus(a, b);
@@ -180,7 +180,7 @@ int main(int argc, char *argv[]) {
                     print("result of", "minus", a, b, c);
                 }
 
-                if (rmenu == 3) {
+                if (rMenu == 3) {
                     a = input("Enter value 1 st: ");
                     b = input("Enter value 2 nd: ");
                     c = mult(a, b);
@@ -188,7 +188,7 @@ int main(int argc, char *argv[]) {
                     print("result of", "x", a, b, c);
                 }
 
-                if (rmenu == 4) {
+                if (rMenu == 4) {
                     a = input("Enter value 1 st: ");
                     b = input("Enter value 2 nd: ");
                     c = divind(a, b);
@@ -196,7 +196,7 @@ int main(int argc, char *argv[]) {
                     print("result", "/", a, b, c);
                 }
 
-            } while (rmenu != 0);
+            } while (rMenu != 0);
         }
 
         if (menu == 2) {
@@ -217,10 +217,10 @@ int main(int argc, char *argv[]) {
                 printf("10.Matrix functions\n");
                 printf("11.Conversion functions\n");
                 printf("0.Back\n");
-                smenu = input("Select Menu: ");
+                sMenu = input("Select Menu: ");
                 system("clear");
 
-                if (smenu == 1) {
+                if (sMenu == 1) {
                     a = input("Enter base(x): ");
                     b = input("Enter power(y): ");
                     c = powerfn(a, b);
@@ -228,35 +228,35 @@ int main(int argc, char *argv[]) {
                     print("result of", "^", a, b, c);
                 }
 
-                if (smenu == 2) {
+                if (sMenu == 2) {
                     a = input("Enter numbers of term: ");
                     c = fact(a);
                     printf("\n");
                     spprint("Factorial of", "!", a, c);
                 }
 
-                if (smenu == 3) {
+                if (sMenu == 3) {
                     a = input("Enter numbers of term: ");
                     c = fib(a);
                     printf("\n");
                     spprint("Fibonacci of", " ", a, c);
                 }
 
-                if (smenu == 4) {
+                if (sMenu == 4) {
                     a = input("Enter your value: ");
                     c = sine(a);
                     printf("\n");
                     spprintf("Sine of", " ", a, c);
                 }
 
-                if (smenu == 5) {
+                if (sMenu == 5) {
                     a = input("Enter your value: ");
                     c = cosine(a);
                     printf("\n");
                     spprintf("Cosine of", " ", a, c);
                 }
 
-                if (smenu == 6) {
+                if (sMenu == 6) {
                     a = input("Enter your value: ");
                     r1 = sine(a);
                     r2 = cosine(a);
@@ -265,21 +265,21 @@ int main(int argc, char *argv[]) {
                     spprintf("Tangent of", " ", a, c);
                 }
 
-                if (smenu == 7) {
+                if (sMenu == 7) {
                     a = input("Enter your value: ");
                     c = sine(a);
                     printf("\n");
                     spprintf("Cosec of", " ", a, 1 / c);
                 }
 
-                if (smenu == 5) {
+                if (sMenu == 5) {
                     a = input("Enter your value: ");
                     c = cosine(a);
                     printf("\n");
                     spprintf("Sec of", " ", a, 1 / c);
                 }
 
-                if (smenu == 8) {
+                if (sMenu == 8) {
                     a = input("Enter your value: ");
                     r1 = sine(a);
                     r2 = cosine(a);
@@ -288,7 +288,7 @@ int main(int argc, char *argv[]) {
                     spprintf("Cot of", " ", a, 1 / c);
                 }
 
-                if (smenu == 10) {
+                if (sMenu == 10) {
                     int operation_number = 0;
                     printf("\n\t\tSum of Matrices(1)\t\tTranspose(2)\t\tProduct of Matrices(3)");
                     printf("\n\tEnter an operation command:");
@@ -307,7 +307,7 @@ int main(int argc, char *argv[]) {
                     }
                 }
 
-                if (smenu == 11) {
+                if (sMenu == 11) {
                     int operation_number = 0;
                     printf("\n\n\n\t\tTemperature(1)\t\tTime(2)");
                     printf("\n\n\n\t\tPlease choose an operation number:");
@@ -326,7 +326,7 @@ int main(int argc, char *argv[]) {
                 }
 
 
-            } while (smenu != 0);
+            } while (sMenu != 0);
         }
 
         if (menu == 3) {
