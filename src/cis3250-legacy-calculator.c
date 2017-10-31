@@ -7,6 +7,7 @@
 #include "factorial.h"
 #include "matrices.h"
 #include "power.h"
+#include "conversions.h"
 #include "headers.h"
 
 int main(int argc, char *argv[]) {
@@ -29,7 +30,7 @@ int main(int argc, char *argv[]) {
         if (menu == 1) {
 
             do {
-                printf("\n======================\n");
+                printf("\n=======================\n");
                 printf("Regular Calculator Menu\n");
                 printf("=======================\n");
                 printf("1.PLUS\n");
