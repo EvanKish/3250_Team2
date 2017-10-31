@@ -281,7 +281,7 @@ int main(int argc, char *argv[]) {
                         j++;
                     }
                 }
-                /*this small part might be off in alignment rn, I'm waiting for the above code to be realigned so I know where this goes (This comment while be deleted when I do that thing)*/
+                
                 if (j == 1) {
                     for (i = 0; i < n; i++) {
                         if (numTemp[i] == temp) {
