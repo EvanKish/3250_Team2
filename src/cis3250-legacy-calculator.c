@@ -9,63 +9,120 @@
 #include "powerfunction.h"
 #include "conversions.h"
 
+
 FILE *help;
 
+/*
+ *Function Takes user input
+ *@param inputName takes the type of input title and displays to user
+ *@return the key entered
+ */
+float input(char *inputName) {
 
-float input(char *inname) {
     float key;
     char temp[9999];
 
     do {
-        printf("%s", inname);
+
+        printf("%s", inputName);
+
         if (!scanf("%f", &key)) {
-            scanf("%s", &temp);//recieve temp
+            //Takes in input from user and stores in temp
+            scanf("%s", &temp);
             printf("Please try again!\n");
         } else {
             return key;
         }
+
     } while (1);
 }
 
-float inputAry(char *inname, int num) {
+/*
+ *Function takes input for accountant calulator
+ *@param inputName takes in title of input (char*)
+ *@param num takes amount of terms to be calculated (int)
+ *@return the key entered
+ */
+float inputAccountCalculator(char *inputName, int num) {
     float key;
-    char temp[9999];
+    char temp[999];
 
     do {
-        printf("%s[%d]: ", inname, num + 1);
+
+        printf("%s[%d]: ", inputName, num + 1);
+
         if (!scanf("%f", &key)) {
+
             scanf("%s", &temp);
             printf("Please try again!\n");
         } else {
             return key;
         }
     } while (1);
+
 }
 
-float plus(float adder, float addin) {
+/*
+ *Function adds passed input
+ *@param adder is flaot passed and is first added number (float)
+ *@param addIn is the second number added and passed (float)
+ *@return the key entered
+ */
+float plus(float adder, float addIn) {
+
     float result;
-    result = adder + addin;
+    result = adder + addIn;
+
     return result;
 }
 
-float minus(float miner, float minin) {
+/*
+ *Function subtracts passed input
+ *@param firstMinus is number to subtract
+ *@param secondMinus is number to subtract from
+ *@return the key entered
+ */
+float minus(float firstMinus, float secondMinus) {
+
     float result;
-    result = miner - minin;
+    result = firstMinus - secondMinus;
+
     return result;
 }
 
-float mult(float multer, float multin) {
+/*
+ *Function multiplies passed input
+ *@param multO is number multiplied (float)
+ *@param multN is number to be multiplied by (float)
+ *@return the key entered
+ */
+float mult(float multO, float multN) {
+
     float result;
-    result = multer * multin;
+    result = multO * multN;
+
     return result;
 }
 
-float divind(float divider, float dividin) {
+/*
+ *Function divides passed input
+ *@param divider is be be divided (float)
+ *@param dividIn is number to be divided by (float)
+ *@return the key entered
+ */
+float divind(float divider, float dividIn) {
+
     float result;
-    result = divider / dividin;
+    result = divider / dividIn;
+
     return result;
 }
 
+/*
+ *Function Takes and calculates factorials
+ *@param term is integer
+ *@return the calculated factorial as an integer
+ */
 int factorial(int term) {
 
     if (term == 0) {
@@ -75,7 +132,13 @@ int factorial(int term) {
     return term * factorial(term - 1);
 }
 
+/*
+ *Function calculates the fib function
+ *@param term will be passed as int
+ *@return  integer fib
+ */
 int fib(int term) {
+
     if (term == 1) {
         return 0;
     }
@@ -85,7 +148,14 @@ int fib(int term) {
     return fib(term - 1) + fib(term - 2);
 }
 
+/*
+ *Function calculates the power of
+ *@param  base will be passed as float
+ *@param  pow is integer (power of)
+ *@return the calculated results to float
+ */
 float power(float base, int pow) {
+
     int i;
     float mem = 1;
     for (i = 0; i < pow; i++) {
@@ -94,10 +164,17 @@ float power(float base, int pow) {
     return mem;
 }
 
+/*
+ *Function calculates the sine function
+ *@param radius will be passed as float
+ *@return the calculated sine
+ */
 float sine(float radius) {
+
     float val, sin;
     val = radius * (PI / 180);
-    sin = val - (power(val, 3) / factorial(3)) + (power(val, 5) / factorial(5)) - (power(val, 7) / factorial(7));
+    sin = val - (power(val, 3) / factorial(3)) + (power(val, 5) / factorial(5)
+            (power(val, 7) / factorial(7));
     return sin;
 }
 
