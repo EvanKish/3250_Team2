@@ -151,7 +151,7 @@ float power(float base,int pow){
     
     int i;
     float mem = 1;
-    for(i=0;i < pow;i++){
+    for(i = 0;i < pow;i++){
         mem *= base;
     }
     return mem;
@@ -165,7 +165,8 @@ float sine(float radius){
     
     float val,sin;
     val = radius*(PI/180);
-    sin = val - (power(val,3)/factorial(3)) + (power(val,5)/factorial(5)) - (power(val,7)/factorial(7));
+    sin = val - (power(val,3)/factorial(3)) + (power(val,5)/factorial(5)
+                                           (power(val,7)/factorial(7));
     return sin;
 }
 
