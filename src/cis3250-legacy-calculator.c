@@ -10,163 +10,171 @@
 #include "conversions.h"
 
 
-FILE*help;
+FILE *help;
+
 /*
  *Function Takes user input
  *@param inputName takes the type of input title and displays to user
  *@return the key entered
  */
-float input(char*inputName){
+float input(char *inputName) {
 
     float key;
     char temp[9999];
 
-    do{
+    do {
 
-        printf("%s",inputName);
+        printf("%s", inputName);
 
-        if(!scanf("%f",&key)){
+        if (!scanf("%f", &key)) {
             //Takes in input from user and stores in temp
-            scanf("%s",&temp);
+            scanf("%s", &temp);
             printf("Please try again!\n");
-        }
-        else{
+        } else {
             return key;
         }
 
-    }while(1);
+    } while (1);
 }
+
 /*
  *Function takes input for accountant calulator
  *@param inputName takes in title of input (char*)
  *@param num takes amount of terms to be calculated (int)
  *@return the key entered
  */
-float inputAccountCalculator(char*inputName,int num){
+float inputAccountCalculator(char *inputName, int num) {
     float key;
     char temp[999];
 
-    do{
+    do {
 
-        printf("%s[%d]: ",inputName,num+1);
+        printf("%s[%d]: ", inputName, num + 1);
 
-        if(!scanf("%f",&key)){
+        if (!scanf("%f", &key)) {
 
-            scanf("%s",&temp);
+            scanf("%s", &temp);
             printf("Please try again!\n");
-        }
-        else{
+        } else {
             return key;
         }
-    }while(1);
+    } while (1);
 
 }
+
 /*
  *Function adds passed input
  *@param adder is flaot passed and is first added number (float)
  *@param addIn is the second number added and passed (float)
  *@return the key entered
  */
-float plus(float adder,float addIn){
+float plus(float adder, float addIn) {
 
     float result;
     result = adder + addIn;
 
     return result;
 }
+
 /*
  *Function subtracts passed input
  *@param firstMinus is number to subtract
  *@param secondMinus is number to subtract from
  *@return the key entered
  */
-float minus(float firstMinus,float secondMinus){
+float minus(float firstMinus, float secondMinus) {
 
     float result;
     result = firstMinus - secondMinus;
 
     return result;
 }
+
 /*
  *Function multiplies passed input
  *@param multO is number multiplied (float)
  *@param multN is number to be multiplied by (float)
  *@return the key entered
  */
-float mult(float multO,float multN){
+float mult(float multO, float multN) {
 
     float result;
     result = multO * multN;
 
     return result;
 }
+
 /*
  *Function divides passed input
  *@param divider is be be divided (float)
  *@param dividIn is number to be divided by (float)
  *@return the key entered
  */
-float divind(float divider,float dividIn){
+float divind(float divider, float dividIn) {
 
     float result;
-    result = divider/dividIn;
+    result = divider / dividIn;
 
     return result;
 }
+
 /*
  *Function Takes and calculates factorials
  *@param term is integer
  *@return the calculated factorial as an integer
  */
-int factorial(int term){
+int factorial(int term) {
 
-    if(term == 0){
+    if (term == 0) {
         return 1;
     }
 
-    return term*factorial(term - 1);
+    return term * factorial(term - 1);
 }
+
 /*
  *Function calculates the fib function
  *@param term will be passed as int
  *@return  integer fib
  */
-int fib(int term){
+int fib(int term) {
 
-    if(term == 1){
+    if (term == 1) {
         return 0;
     }
-    if(term == 2){
+    if (term == 2) {
         return 1;
     }
-    return fib(term-1) + fib(term-2);
+    return fib(term - 1) + fib(term - 2);
 }
+
 /*
  *Function calculates the power of
  *@param  base will be passed as float
  *@param  pow is integer (power of)
  *@return the calculated results to float
  */
-float power(float base,int pow){
+float power(float base, int pow) {
 
     int i;
     float mem = 1;
-    for(i = 0;i < pow;i++){
+    for (i = 0; i < pow; i++) {
         mem *= base;
     }
     return mem;
 }
+
 /*
  *Function calculates the sine function
  *@param radius will be passed as float
  *@return the calculated sine
  */
-float sine(float radius){
+float sine(float radius) {
 
-    float val,sin;
-    val = radius*(PI/180);
-    sin = val - (power(val,3)/factorial(3)) + (power(val,5)/factorial(5)
-            (power(val,7)/factorial(7));
+    float val, sin;
+    val = radius * (PI / 180);
+    sin = val - (power(val, 3) / factorial(3)) + (power(val, 5) / factorial(5)
+            (power(val, 7) / factorial(7));
     return sin;
 }
 
@@ -175,10 +183,10 @@ float sine(float radius){
  * @param radius is float provided by user
  * @return calculated cosine
  */
-float cosine(float radius){
+float cosine(float radius) {
     float val, cos;
-    val = radius * (PI/180);
-    cos = 1 - (power(val,2)/factorial(2))+(power(val,4)/factorial(4))-(power(val,6)/factorial(6));
+    val = radius * (PI / 180);
+    cos = 1 - (power(val, 2) / factorial(2)) + (power(val, 4) / factorial(4)) - (power(val, 6) / factorial(6));
     return cos;
 }
 
@@ -189,8 +197,8 @@ float cosine(float radius){
  *@param ini is specified by the user
  *@param res is the calculated result
  */
-int spprint(char*screen, char*sym, int ini, int res){
-    printf("%s %d%s = %d\n",screen,ini,sym,res);
+int spprint(char *screen, char *sym, int ini, int res) {
+    printf("%s %d%s = %d\n", screen, ini, sym, res);
 
     return 0;
 }
@@ -202,8 +210,8 @@ int spprint(char*screen, char*sym, int ini, int res){
  *@param ini is specified by the user
  *@param res is the calculated result
  */
-float spprintf(char*screen, char*sym, float ini, float res){
-    printf("%s %.4f%s = %.4f\n",screen,ini,sym,res);
+float spprintf(char *screen, char *sym, float ini, float res) {
+    printf("%s %.4f%s = %.4f\n", screen, ini, sym, res);
 
     return 0;
 }
@@ -215,8 +223,8 @@ float spprintf(char*screen, char*sym, float ini, float res){
  *@param ini is specified by the user
  *@param res is the calculated result
  */
-float print(char*screen, char*sym, float ini, float upt, float res){
-    printf("%s %.4f %s %.4f = %.4f\n",screen,ini,sym,upt,res);
+float print(char *screen, char *sym, float ini, float upt, float res) {
+    printf("%s %.4f %s %.4f = %.4f\n", screen, ini, sym, upt, res);
 
     return 0;
 }
@@ -226,8 +234,8 @@ float print(char*screen, char*sym, float ini, float upt, float res){
  *@param screen is the beginning of the message to be printed
  *@param ans is the calculated result
  */
-float Aryprint(char*screen, float ans){
-    printf("%s : %.4f\n",screen,ans);
+float Aryprint(char *screen, float ans) {
+    printf("%s : %.4f\n", screen, ans);
 
     return 0;
 }
@@ -448,10 +456,10 @@ int main(int argc, char *argv[]) {
             n = input("Enter number of term: ");
 
             float set[n];
-            int numTemp[n];
+            int numtemp[n];
 
             for (i = 0; i < n; i++) {
-                set[i] = inputAry("Enter value terms", i);
+                set[i] = inputAccountCalculator("Enter value terms", i);
             }
 
             for (i = 0; i < n; i++) {
@@ -479,21 +487,21 @@ int main(int argc, char *argv[]) {
             }
 
             for (i = 0; i < n; i++) {
-                numTemp[i] = 0;
+                numtemp[i] = 0;
             }
             for (i = 0; i < n; i++) {
                 temp = set[i];
                 for (j = i; j < n; j++) {
                     if (set[j] == temp) {
-                        numTemp[i]++;
+                        numtemp[i]++;
                     }
                 }
             }
 
-            temp = numTemp[0];
+            temp = numtemp[0];
             for (i = 1; i < n; i++) {
-                if (numTemp[i] > temp) {
-                    temp = numTemp[i];
+                if (numtemp[i] > temp) {
+                    temp = numtemp[i];
                 }
             }
 
@@ -503,7 +511,7 @@ int main(int argc, char *argv[]) {
                 j = 0;
 
                 for (i = 0; i < n; i++) {
-                    if (numTemp[i] == temp) {
+                    if (numtemp[i] == temp) {
                         j++;
                     }
                 }
@@ -518,7 +526,6 @@ int main(int argc, char *argv[]) {
                     printf("Not have mode value\n");
                 }
             }
-
 
             /**
              * This portion of the program outputs a menu, gathers the
