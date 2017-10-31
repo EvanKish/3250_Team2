@@ -92,7 +92,7 @@ void matrixProduct() {
         }
     }
     
-    matrixResult[i][j] = 1;
+    //matrixResult[i][j] = 1;
     
     for(int i = 0;i < matrix1Rows; i++) {
         for(int j = 0; j < matrix2Cols; j++) {

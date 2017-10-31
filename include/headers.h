@@ -4,7 +4,7 @@
 //originally in main
 
 float input(char*inname);
-float inputAry(char*inname,int num);
+float inputAccountCalculator(char *inputName, int num);
 float plus(float adder,float addin);
 float minus(float miner,float minin);
 float mult(float multer,float multin);
