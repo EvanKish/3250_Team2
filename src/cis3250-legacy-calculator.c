@@ -9,8 +9,8 @@
 #include "power.h"
 #include "headers.h"
 
-FILE *help;
 int main(int argc, char *argv[]) {
+    FILE *help;
     float a, b, c;
     float r1, r2;
     int menu, rmenu, smenu;
