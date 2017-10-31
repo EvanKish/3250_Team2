@@ -170,6 +170,11 @@ float sine(float radius){
     return sin;
 }
 
+/**
+ * Computes cosine value
+ * @param radius is float provided by user
+ * @return calculated cosine
+ */					       
 float cosine(float radius){
     float val, cos;
     val = radius * (PI/180);
@@ -177,24 +182,50 @@ float cosine(float radius){
     return cos;
 }
 
+/**
+ * Prints result of factorial or fibonacci
+ *@param screen is the beginning of the message to be printed
+ *@param sym is an ! for factorial or a space for fibonacci
+ *@param ini is specified by the user
+ *@param res is the calculated result
+ */					       
 int spprint(char*screen, char*sym, int ini, int res){
     printf("%s %d%s = %d\n",screen,ini,sym,res);
 
     return 0;
 }
 
+/**
+ * Prints result of Sine, Cosine, Tangent, Cosecant, Secant, or Cotangent
+ *@param screen is the beginning of the message to be printed
+ *@param sym is a symbol designating the function chosen
+ *@param ini is specified by the user
+ *@param res is the calculated result
+ */					       
 float spprintf(char*screen, char*sym, float ini, float res){
     printf("%s %.4f%s = %.4f\n",screen,ini,sym,res);
 
     return 0;
 }
 
+/**
+ * Prints result of multiplication, subtraction, addition, division, and power
+ *@param screen is the beginning of the message to be printed
+ *@param sym is a symbol designating the function chosen
+ *@param ini is specified by the user
+ *@param res is the calculated result
+ */					       
 float print(char*screen, char*sym, float ini, float upt, float res){
     printf("%s %.4f %s %.4f = %.4f\n",screen,ini,sym,upt,res);
 
     return 0;
 }
 
+/**
+ * Prints range, x_bar, max and min
+ *@param screen is the beginning of the message to be printed
+ *@param ans is the calculated result
+ */					       
 float Aryprint(char*screen, float ans){
     printf("%s : %.4f\n",screen,ans);
 
