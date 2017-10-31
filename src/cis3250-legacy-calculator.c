@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define PI 3.1415926535897932384626433832795
 
@@ -7,7 +8,6 @@
 #include "matrices.h"
 #include "powerfunction.h"
 #include "conversions.h"
-#include <string.h>
 
 FILE *help;
 
